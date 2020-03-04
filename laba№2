@@ -1,0 +1,49 @@
+import matplotlib.pyplot as plt
+import numpy as np
+%matplotlib inline
+def f1(x):
+  return -0.5*x
+x = np.linspace(-4,0,100)
+y = f1(x)
+plt.figure(figsize=(5,5))
+plt.plot(x,y,'-r', linewidth=3)
+plt.grid(True)
+
+def f2(x):
+  return 2 - np.sqrt(4-x*x)
+x = np.linspace(0,2,100)
+y = f2(x)
+plt.figure(figsize=(5,5))
+plt.plot(x,y,'-b', linewidth=3)
+plt.grid(True)
+
+def f3(x):
+  return np.sqrt(4-(x-2)*(x-2))
+x = np.linspace(2,4,100)
+y = f3(x)
+plt.figure(figsize=(5,5))
+plt.plot(x,y,'-y', linewidth=3)
+plt.grid(True)
+
+def f4(x):
+  return -1*x +4
+x = np.linspace(4,6,100)
+y = f4(x)
+plt.figure(figsize=(5,5))
+plt.plot(x,y,'-r', linewidth=3)
+plt.grid(True)
+
+def foo(x):
+  if (x >= -4 and x < 0):
+    return f1(x)
+  elif (x >= 0 and x < 2):
+    return f2(x)
+  elif (x >= 2 and x < 4):
+    return f3(x)
+  elif (x >= 4):
+    return f4(x)
+x = np.linspace(-4,5,1000)
+y = [foo(i) for i in x]
+plt.figure(figsize=(12,4))
+plt.plot(x,y,'-b', linewidth=3)
+plt.grid(True)
