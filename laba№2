@@ -45,5 +45,5 @@ def foo(x):
 x = np.linspace(-4,5,1000)
 y = [foo(i) for i in x]
 plt.figure(figsize=(12,4))
-plt.plot(x,y,'-b', linewidth=3)
+plt.plot(x,y,'-r', linewidth=3)
 plt.grid(True)
