@@ -14,7 +14,7 @@ def f2(x):
 x = np.linspace(0,2,100)
 y = f2(x)
 plt.figure(figsize=(5,5))
-plt.plot(x,y,'-b', linewidth=3)
+plt.plot(x,y,'-r', linewidth=3)
 plt.grid(True)
 
 def f3(x):
