@@ -1,0 +1,6 @@
+import random
+import  time
+import operator
+
+def initizialtion(n):
+    
